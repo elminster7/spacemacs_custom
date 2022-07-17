@@ -1,0 +1,2 @@
+;;; Generated package description from ivy-rtags.el  -*- no-byte-compile: t -*-
+(define-package "ivy-rtags" "20191222.920" "RTags completion back-end for ivy" '((ivy "0.7.0") (rtags "2.10")) :commit "c628efc9b485470a48aec2692d79f7c140bc5b92" :authors '(("Jan Erik Hanssen" . "jhanssen@gmail.com") ("Anders Bakken" . "agbakken@gmail.com")) :maintainer '("Jan Erik Hanssen" . "jhanssen@gmail.com") :url "https://github.com/Andersbakken/rtags")
