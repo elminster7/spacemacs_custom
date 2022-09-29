@@ -250,6 +250,9 @@
     (spacemacs/add-realgud-debugger mode "gdb")))
 
 (defun c-c++/post-init-semantic ()
+  (semantic-mode t)
+  (global-semantic-highlight-func-mode t)
+  (global-semantic-decoration-mode t)
   (add-hook 'c-mode-local-vars-hook #'spacemacs//c-c++-setup-semantic)
   (add-hook 'c++-mode-local-vars-hook #'spacemacs//c-c++-setup-semantic))
 
