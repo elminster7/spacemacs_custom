@@ -44,6 +44,7 @@
         ivy-xref
         org
         persp-mode
+        google-translate
         projectile
         recentf
         smex
@@ -67,6 +68,28 @@
     :bind ("C-c g" . counsel-git)
     ("C-c j" . counsel-git-grep)))
 
+(defun ivy/init-google-translate ()
+  (use-package google-translate
+    :ensure t
+    :config
+    (require 'google-translate-smooth-ui)
+    (setq google-translate-translation-directions-alist
+          '(("en" . "ko") ("ko" . "en")))
+    (setq google-translate-output-destination nil)
+    (setq google-translate-pop-up-buffer-set-focus t)
+    (setq google-translate-default-source-language "en")
+    (setq google-translate-default-target-language "ko")
+    (global-set-key "\C-cs" 'google-translate-smooth-translate)
+    ;(global-set-key "\C-cs" 'google-translate-buffer)
+    )
+  )
+
+(defun insert-doc-comment ()
+  (interactive)
+  ;; (insert "/*\n *\n * IAMROOT18,")
+  (insert (format-time-string "/*\n * IAMROOT, %Y.%m.%d:\n */"))
+  )
+
 (defun ivy/init-bm ()
   (use-package bm
   :init
@@ -75,6 +98,7 @@
   (bind-key "C-c 2" 'bm-previous)
   (bind-key "C-c h" 'bm-show-all)
   (bind-key "C-h s" 'bs-show)
+  (bind-key "C-c e" 'insert-doc-comment)
   :config
   (set-face-attribute 'bm-face nil :foreground "black" :background "brightblack")
   ;(set-face-attribute 'hl-line nil :background "brightblack")

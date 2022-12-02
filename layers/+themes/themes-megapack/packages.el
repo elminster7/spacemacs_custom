@@ -54,6 +54,7 @@
     eziam-theme
     farmhouse-theme
     flatland-theme
+    vs-dark-theme
     flatui-theme
     gandalf-theme
     gotham-theme
