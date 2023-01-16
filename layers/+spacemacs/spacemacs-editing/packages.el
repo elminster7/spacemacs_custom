@@ -41,7 +41,7 @@
     (smartparens :toggle dotspacemacs-activate-smartparens-mode)
     (evil-swap-keys :toggle dotspacemacs-swap-number-row)
     (spacemacs-whitespace-cleanup :location (recipe :fetcher local))
-    string-edit
+    ;string-edit
     string-inflection
     multi-line
     undo-tree
